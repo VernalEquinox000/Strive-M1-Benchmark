@@ -77,31 +77,96 @@
 
 
         <style>
+
+            html, body {
+                height: 100%;
+            }
+
+            html {
+                display: table;
+                margin: auto;
+            }
+
+            body {
+                max-width: 100%;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            header {
+                text-align: center;
+                background-color: skyblue;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+
+
+            a { 
+                color: brown;
+            }
+
+
             table {
-                width:100%;
-                display: block;
+        
+                border: 10px solid black;
+                border-radius: 50%;
                 margin-left: auto;
                 margin-right: auto;
-                border: 10px;
                 align-items: center;
                 justify-content: center;
-                }
+                border-radius: 10px;
+
+            }
             
-            tr {align-items: center;}
-
-
-            td {align-items: center;
+            tr {
                 text-align: center;
-                width: 300px
+                display: block;
+                }
+
+
+            td {
                 
+                border: 10px green dotted;
+                border-radius: 10px;
+                align-items: center;
+                text-align: center;
+                width: 300px;
                 }
 
 
 
             img {
+                position: center;
                 width: 75%;
-                display: block;
+                display: flex;
                 }
+
+            p {
+                margin: 10px;
+                }
+
+            .container {
+                border: 10px;
+            }
+
+
+            .ordered:hover {
+                font-size: xx-large blue;
+            }
+
+
+            footer {
+                background-color: skyblue;
+            }
+
+
+            .hide:hover {
+                display: none; 
+            }
+
         </style>
     </head>
     <body>
@@ -109,17 +174,18 @@
 
         <span>Want to change header? Write here: <input type="text" id="getNewHeader" /><input type="button" class="button" value="And click here" onclick="changeHeader()"/></span>
 
-        <h1>Welcome to the page of 50 exercises!</h1>
+        <h1 class="title">Welcome to the page of 50 exercises!</h1>
 
-        <ol class="list-japan"><h2>These are the exercises you will find over here!</h2>
+        <ol class="ordered"><h2>These are the exercises you will find over here!</h2>
             <li>HTML</li>
             <li>CSS</li>
+            <li>JS (in the file .js)</li>
             <li>DOM</li>
             <li>Extra</li>
         </ol>
         <br>
         <br>
-       <h2>Some music I'm listening while doing this benchmark test</h2> 
+       <h2>Some music I'm listening</a> while doing this benchmark test</h2> 
        
 
         <table id="myTable">
@@ -132,27 +198,27 @@
             </tr>
             <tr>
                 <td><h3>Boris</h3></td>
-                <td><a href="https://borisheavyrocks.com/" target="blank"><img src="https://media.pitchfork.com/photos/592c6d57d7a71d1ea569d515/2:1/w_648/31ea1994.jpg" alt="Boris"></a></td>
+                <td><a href="https://borisheavyrocks.com/" target="blank" onmouseover=redBackground()><img src="https://media.pitchfork.com/photos/592c6d57d7a71d1ea569d515/2:1/w_648/31ea1994.jpg" alt="Boris"></a></td>
                 <td>Tokyo, Japan</td>
-                <td colspan="2">1995 - current ||| Smile (2008)</td>
+                <td colspan="2">1995 - current ||| <a href="https://www.youtube.com/watch?v=W3MAa4drRVQ" target="blank" onmousever=redBackground()>Smile</a> (2008)</td>
             </tr>
             <tr>
                 <td><h3>The Smiths</h3></td>
                 <td><a href="https://www.officialsmiths.co.uk/tqid/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/en/f/ff/SmithsPromoPhoto_TQID_1985.jpg" alt="The Smiths"></a></td> 
                 <td>Manchester, UK</td>
-                <td colspan="2">1982 - 1987 ||| The Queen Is Dead (1986)</td>
+                <td colspan="2">1982 - 1987 ||| <a href="https://www.youtube.com/watch?v=k30XeJNAbt4&list=PLdlKjfbzZGdnN_prwsxZUf745SVUz88MX" target="blank" onmousever=redBackground()>The Queen Is Dead</a> (1986)</td>
             </tr>
             <tr>
                 <td><h3>Lightning Bolt<h3></td>
                 <td><a href="http://laserbeast.com/info.html" target="blank"><img src="https://media.pitchfork.com/photos/5d432b15f01d89000931ac5b/2:1/w_2560%2Cc_limit/Lightning-Bolt.jpg" alt="Lightning Bolt"></a></td> 
                 <td>Providence, RI, USA</td>
-                <td colspan="2">1994 - current ||| Wonderful Rainbow (2003)</td>
+                <td colspan="2">1994 - current ||| <a href="https://www.youtube.com/watch?v=EP_E36j-TMQ" target="blank" onmousever=redBackground()>Wonderful Rainbow</a> (2003)</td>
             </tr>
             <tr>
                 <td><h3>Julie's Haircut</h3></td>
                 <td><a href="http://www.julieshaircut.com/" target="blank"><img src="https://www.ondarock.it/images/monografie/julieshaircut_1_1347870322.jpg" alt="Julie's Haircut"></a></td> 
                 <td>Modena/Reggio Emilia, Italy</td>
-                <td colspan="2">1994 - current ||| Ashram Equinox (2013)</td>
+                <td colspan="2">1994 - current ||| <a href="https://www.youtube.com/watch?v=ToSmi2B-DTE" target="blank" onmousever=redBackground()>Ashram Equinox</a> (2013)</td>
               </tr>
           </table>
         
@@ -164,16 +230,16 @@
                   
                 <h2>And this is just some other random stuff I will do in the weekend</h2>
                 <ul>
-                    <li>Finish some Strive HW</li>
-                    <li>Finish a Linkedin course</li>
-                    <li>Just a short family trip somewhere</li>
+                    <li class="liOfUl">Finish some Strive HW</li>
+                    <li class="liOfUl">Finish a Linkedin course</li>
+                    <li class="liOfUl">Just a short family trip somewhere</li>
                 </ul>
-                <span>Need to add more tasks? Write here: <input type="text" id="newTask" /><input type="button" class="button" value="Add new Task" onclick="addNewTask()"/> </span>
+                <p>Need to add more tasks? Write here: <input type="text" id="newTask" /><input type="button" class="button" value="Add new Task" onclick="addNewTask()"/> or empty the list: <input type="button" class="button" value="Empty List!" onclick="emptyList()"/>
               </p>
           </div>
 
 
-          <footer style="background-color: skyblue"><p class="Footer text" style="align-items: center;"><h4 style="color:whitesmoke; text-align: center;">Page made by Vernal Equinox Prod. All rights unreserved.</h4></p></footer>
+          <footer class="hide"><p class="Footer text" style="align-items: center;"><h4 style="color:whitesmoke; text-align: center;">Page made by Vernal Equinox Prod. All rights unreserved.</h4></p></footer>
 
 
           <script>
@@ -190,7 +256,7 @@
                   console.log(everyTd[i].innerText)
               }
 
-              //34 ---completare o cambiare
+              //34
                 function changeHeader () {
 
                 let header=document.querySelector('header')
@@ -226,9 +292,9 @@
                 }
 
             //38
-                window.onload(
+                window.onload = function () {
                     console.log("Page Loaded")
-                )
+                }
 
             
 
@@ -239,11 +305,19 @@
                     let newInputTask = document.querySelector('#newTask')
                     let newLi = document.createElement('li')
                     newLi.innerText = newTask.value;
+                    newLi.class = "liOfUl"
                     document.querySelector('ul').appendChild(newLi)
                     newInputTask.value = ''
         
                 }
 
+            //40
+                function emptyList() {
+                    let allLiOfUl = document.querySelectorAll('.liOfUl')
+                    for (let i=0; i<allLiOfUl.length; i++) {
+                        document.querySelector('ul').removeChild(allLiOfUl[i])
+                    }
+                }   
 
 
           </script>
