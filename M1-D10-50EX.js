@@ -69,13 +69,16 @@ console.log(maxMin(arrayOfHundred))
     
 
 //28 ---incompleto
-let arrayOfHun = [0];
-for (let s = 0; s < 3; s++) {
-    for (let i = 0; i < 10; i++) {
-        arrayOfHun[i] = (Math.floor(Math.random() * 100))
+let arrayOfTen = [];
+let arrayOfArrays = [];
+while (i < 5) {
+    for (let s = 0; s < 3; s++) {
+        arrayOfTen[s] = (Math.floor(Math.random() * 100))
     }
+arrayOfArrays[i].arrayOfTen
 }
-console.log(arrayOfHun)
+
+console.log(arrayOfArrays)
 
 
 /*for (let u = 0; u < arrayOfHun.length; u++) {
